@@ -33,7 +33,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image 3" translatesAutoresizingMaskIntoConstraints="NO" id="O1g-hS-syG">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="O1g-hS-syG">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ei5-cj-w5a">
@@ -84,6 +84,7 @@
                     <navigationItem key="navigationItem" id="j6e-N1-4VD"/>
                     <connections>
                         <outlet property="doneButton" destination="sja-Bp-ppg" id="xfO-n9-5hJ"/>
+                        <outlet property="mainImageView" destination="O1g-hS-syG" id="Rve-ZH-0Y9"/>
                         <outlet property="todoButton" destination="Go9-hN-tsB" id="5bf-3X-3RQ"/>
                     </connections>
                 </viewController>
@@ -351,7 +352,6 @@
     </scenes>
     <resources>
         <image name="Image 2" width="224.66667175292969" height="399.33334350585938"/>
-        <image name="Image 3" width="224.66667175292969" height="399.33334350585938"/>
         <image name="square.and.pencil" catalog="system" width="128" height="113"/>
         <image name="trash" catalog="system" width="117" height="128"/>
         <systemColor name="systemBackgroundColor">
