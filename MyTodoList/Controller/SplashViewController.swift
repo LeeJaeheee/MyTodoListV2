@@ -17,7 +17,7 @@ class SplashViewController: UIViewController {
         let gif = UIImage.gifImageWithName("fudolist")
         imageView.image = gif
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.27) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             self.performSegue(withIdentifier: "navSegue", sender: nil)
         }
     }
