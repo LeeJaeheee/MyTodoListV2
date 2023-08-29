@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jPh-RK-Ucy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8PQ-je-s9r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -32,7 +32,6 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="sbg-NJ-roJ" id="9Fz-Ke-Xay"/>
-                        <segue destination="8PQ-je-s9r" kind="presentation" identifier="navSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="partialCurl" id="6WI-H3-zNV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mcg-WU-agK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -45,7 +44,7 @@
                 <navigationController id="8PQ-je-s9r" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="cgy-Dg-3Ec"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HzO-ze-uMT">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -68,7 +67,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ei5-cj-w5a">
-                                <rect key="frame" x="81.666666666666686" y="114" width="230" height="100"/>
+                                <rect key="frame" x="81.666666666666686" y="173" width="230" height="100"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Go9-hN-tsB">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
@@ -225,14 +224,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image 2" translatesAutoresizingMaskIntoConstraints="NO" id="r14-VF-Dcg">
-                                <rect key="frame" x="76.666666666666686" y="109" width="240" height="240"/>
+                                <rect key="frame" x="76.666666666666686" y="168" width="240" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="KbL-XF-MPy"/>
                                     <constraint firstAttribute="width" secondItem="r14-VF-Dcg" secondAttribute="height" multiplier="1:1" id="SXp-rO-6AR"/>
                                 </constraints>
                             </imageView>
                             <datePicker contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="H9h-gr-x3w">
-                                <rect key="frame" x="81.666666666666686" y="409" width="230" height="40"/>
+                                <rect key="frame" x="81.666666666666686" y="468" width="230" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="CVt-iC-rjO"/>
                                     <constraint firstAttribute="width" constant="230" id="J0l-7M-y7S"/>
@@ -240,7 +239,7 @@
                                 <locale key="locale" localeIdentifier="ko_KR"/>
                             </datePicker>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Todo" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lsE-53-6un">
-                                <rect key="frame" x="81.666666666666686" y="469" width="230" height="35"/>
+                                <rect key="frame" x="81.666666666666686" y="528" width="230" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="hqy-Zy-owx"/>
                                     <constraint firstAttribute="width" constant="230" id="p3W-J7-3b2"/>
@@ -249,7 +248,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n9W-8c-Kmp">
-                                <rect key="frame" x="81.666666666666686" y="554" width="230" height="36"/>
+                                <rect key="frame" x="81.666666666666686" y="613" width="230" height="36"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="230" id="9LQ-Pe-23S"/>
