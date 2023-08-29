@@ -63,7 +63,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="O1g-hS-syG">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image 3" translatesAutoresizingMaskIntoConstraints="NO" id="O1g-hS-syG">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ei5-cj-w5a">
@@ -99,23 +99,34 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yw2-HQ-LCc" customClass="LottieAnimationView" customModule="Lottie">
+                                <rect key="frame" x="82" y="665" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="Ezb-L6-wLN"/>
+                                    <constraint firstAttribute="height" constant="120" id="W1c-0N-D2A"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0ci-XM-B43"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="O1g-hS-syG" firstAttribute="leading" secondItem="HoI-E1-2qR" secondAttribute="leading" id="7E5-gC-d4a"/>
+                            <constraint firstItem="yw2-HQ-LCc" firstAttribute="top" secondItem="ei5-cj-w5a" secondAttribute="bottom" constant="392" id="ICu-sA-27v"/>
                             <constraint firstAttribute="bottom" secondItem="O1g-hS-syG" secondAttribute="bottom" id="Iwt-sD-COX"/>
                             <constraint firstItem="ei5-cj-w5a" firstAttribute="centerX" secondItem="HoI-E1-2qR" secondAttribute="centerX" id="JW3-pe-svS"/>
                             <constraint firstItem="ei5-cj-w5a" firstAttribute="top" secondItem="0ci-XM-B43" secondAttribute="top" constant="70" id="KeL-er-Rsk"/>
                             <constraint firstAttribute="trailing" secondItem="O1g-hS-syG" secondAttribute="trailing" id="j7E-Bm-qwR"/>
                             <constraint firstItem="O1g-hS-syG" firstAttribute="top" secondItem="HoI-E1-2qR" secondAttribute="top" id="sf1-wY-P5K"/>
+                            <constraint firstItem="yw2-HQ-LCc" firstAttribute="leading" secondItem="0ci-XM-B43" secondAttribute="leading" constant="82" id="vBE-MD-CGA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="j6e-N1-4VD"/>
                     <connections>
                         <outlet property="doneButton" destination="sja-Bp-ppg" id="xfO-n9-5hJ"/>
+                        <outlet property="giftboxView" destination="yw2-HQ-LCc" id="2Tx-ej-yni"/>
                         <outlet property="mainImageView" destination="O1g-hS-syG" id="Rve-ZH-0Y9"/>
                         <outlet property="todoButton" destination="Go9-hN-tsB" id="5bf-3X-3RQ"/>
+                        <segue destination="EKk-ZK-xR6" kind="show" id="Vzx-8d-9W3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QqY-6s-bEg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -294,6 +305,35 @@
             </objects>
             <point key="canvasLocation" x="1498" y="-295"/>
         </scene>
+        <!--Cat-->
+        <scene sceneID="Yu8-zW-aaE">
+            <objects>
+                <viewController id="EKk-ZK-xR6" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CTL-Fu-wgA">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qe1-Qv-sh4">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fgg-R0-Ofn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Qe1-Qv-sh4" firstAttribute="trailing" secondItem="fgg-R0-Ofn" secondAttribute="trailing" id="1ZN-Zn-dBG"/>
+                            <constraint firstItem="Qe1-Qv-sh4" firstAttribute="leading" secondItem="fgg-R0-Ofn" secondAttribute="leading" id="Gpu-K0-Nqa"/>
+                            <constraint firstItem="Qe1-Qv-sh4" firstAttribute="top" secondItem="fgg-R0-Ofn" secondAttribute="top" id="nBP-Yd-nWD"/>
+                            <constraint firstItem="Qe1-Qv-sh4" firstAttribute="bottom" secondItem="fgg-R0-Ofn" secondAttribute="bottom" id="r3g-1U-yV0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Cat" id="RAI-a4-01o">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="Ezv-BD-EGG"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="75D-in-h7S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-498.47328244274809" y="710.56338028169023"/>
+        </scene>
         <!--DONE LIST-->
         <scene sceneID="agW-zH-PUI">
             <objects>
@@ -382,6 +422,7 @@
     </scenes>
     <resources>
         <image name="Image 2" width="224.66667175292969" height="399.33334350585938"/>
+        <image name="Image 3" width="224.66667175292969" height="399.33334350585938"/>
         <image name="square.and.pencil" catalog="system" width="128" height="113"/>
         <image name="trash" catalog="system" width="117" height="128"/>
         <systemColor name="systemBackgroundColor">

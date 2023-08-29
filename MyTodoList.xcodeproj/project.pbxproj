@@ -30,6 +30,7 @@
 		D2D308E72A85AFFA002894C5 /* TodoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D308E62A85AFFA002894C5 /* TodoDetailViewController.swift */; };
 		D2D308E92A85B223002894C5 /* Calendar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D308E82A85B223002894C5 /* Calendar+Extension.swift */; };
 		D2FE262D2A9DCE2C002901A0 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = D2FE262C2A9DCE2C002901A0 /* Lottie */; };
+		D2FE262F2A9DD32C002901A0 /* lN7uSuXCEQ.json in Resources */ = {isa = PBXBuildFile; fileRef = D2FE262E2A9DD32C002901A0 /* lN7uSuXCEQ.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		D2D308E42A858F67002894C5 /* DoneListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneListTableViewController.swift; sourceTree = "<group>"; };
 		D2D308E62A85AFFA002894C5 /* TodoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailViewController.swift; sourceTree = "<group>"; };
 		D2D308E82A85B223002894C5 /* Calendar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar+Extension.swift"; sourceTree = "<group>"; };
+		D2FE262E2A9DD32C002901A0 /* lN7uSuXCEQ.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lN7uSuXCEQ.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 		D2D308B52A851C83002894C5 /* MyTodoList */ = {
 			isa = PBXGroup;
 			children = (
+				D2FE262E2A9DD32C002901A0 /* lN7uSuXCEQ.json */,
 				D22E70D92A97D91D00C6CFBA /* fudolist.gif */,
 				D2D308B62A851C83002894C5 /* AppDelegate.swift */,
 				D2D308B82A851C83002894C5 /* SceneDelegate.swift */,
@@ -222,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2D308C32A851C85002894C5 /* LaunchScreen.storyboard in Resources */,
+				D2FE262F2A9DD32C002901A0 /* lN7uSuXCEQ.json in Resources */,
 				D2D308C02A851C85002894C5 /* Assets.xcassets in Resources */,
 				D22E70DA2A97D91D00C6CFBA /* fudolist.gif in Resources */,
 				D2D308BE2A851C83002894C5 /* Main.storyboard in Resources */,
@@ -483,7 +487,7 @@
 			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 4.0.0;
+				minimumVersion = 4.2.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

@@ -6,12 +6,14 @@
 //
 
 import UIKit
+import Lottie
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var todoButton: UIButton!
     @IBOutlet weak var doneButton: UIButton!
     
+    @IBOutlet weak var giftboxView: LottieAnimationView!
     @IBOutlet weak var mainImageView: UIImageView!
     
     override func viewDidLoad() {
@@ -29,8 +31,21 @@ class ViewController: UIViewController {
                 }
             }
         }
+
+        let animationView = LottieAnimationView(name: "lN7uSuXCEQ")
+        animationView.contentMode = .scaleAspectFill
+        giftboxView.addSubview(animationView)
+        animationView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            animationView.centerXAnchor.constraint(equalTo: giftboxView.centerXAnchor),
+            animationView.centerYAnchor.constraint(equalTo: giftboxView.centerYAnchor, constant: 15),
+            animationView.widthAnchor.constraint(equalTo: giftboxView.widthAnchor, multiplier: 1.8), // Enlarge width
+            animationView.heightAnchor.constraint(equalTo: giftboxView.heightAnchor, multiplier: 1.8) // Enlarge height
+        ])
+        animationView.loopMode = .loop
+        animationView.play()
     }
 
-
+    
 }
 
