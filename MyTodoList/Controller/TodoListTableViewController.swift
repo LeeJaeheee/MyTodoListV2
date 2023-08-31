@@ -66,13 +66,14 @@ class TodoListTableViewController: UITableViewController {
     // TODO: "정말 삭제하시겠습니까?" 확인창 추가하기
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-
             let tasksForSection = TaskList.list.filter { $0.dueDate == uniqueDueDates[indexPath.section] }.sorted(by: { $0.time < $1.time })
             let task = tasksForSection[indexPath.row]
             
             TaskList.deleteTask(id: task.id)
-            
             tableView.deleteRows(at: [indexPath], with: .fade)
+            
+            uniqueDueDates = Array(Set(TaskList.list.map { $0.dueDate })).sorted()
+            tableView.reloadData()
         }
     }
 
