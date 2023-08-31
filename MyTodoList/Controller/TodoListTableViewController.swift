@@ -9,6 +9,8 @@ import UIKit
 
 class TodoListTableViewController: UITableViewController {
     
+    @IBOutlet weak var emptyListView: UIView!
+    
     var titleTextField: UITextField!
     var dueDateTextField: UITextField!
     var timeTextField: UITextField!
@@ -24,6 +26,7 @@ class TodoListTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         uniqueDueDates = Array(Set(TaskList.list.map { $0.dueDate })).sorted()
+        emptyListView.isHidden = !TaskList.list.isEmpty
         tableView.reloadData()
     }
     
@@ -39,6 +42,7 @@ class TodoListTableViewController: UITableViewController {
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
+        emptyListView.isHidden = !TaskList.list.isEmpty
         return uniqueDueDates.count
     }
 

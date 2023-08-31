@@ -9,6 +9,8 @@ import UIKit
 
 class DoneListTableViewController: UITableViewController {
     
+    @IBOutlet weak var emptyListView: UIView!
+    
     var uniqueDueDates: [Date] = []
     
     override func viewDidLoad() {
@@ -17,9 +19,12 @@ class DoneListTableViewController: UITableViewController {
         uniqueDueDates = Array(Set(TaskList.doneList.map { $0.dueDate })).sorted()
     }
     
+    
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
+        uniqueDueDates = Array(Set(TaskList.doneList.map { $0.dueDate })).sorted()
+        emptyListView.isHidden = !TaskList.doneList.isEmpty
         return uniqueDueDates.count
     }
     
@@ -34,14 +39,12 @@ class DoneListTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TodoListTableViewCell", for: indexPath) as! TodoListTableViewCell
-        
         let doneTasks = TaskList.doneList
         let tasksForSection = doneTasks.filter { task in
             return task.dueDate == uniqueDueDates[indexPath.section]
         }.sorted(by: { task1, task2 in
             return task1.time < task2.time
         })
-        // let tasksForSection = TaskList.doneList.filter { $0.dueDate == uniqueDueDates[indexPath.section] }.sorted(by: { $0.time < $1.time })
         let task = tasksForSection[indexPath.row]
         
         cell.task = task
@@ -57,8 +60,10 @@ class DoneListTableViewController: UITableViewController {
             let task = tasksForSection[indexPath.row]
             
             TaskList.deleteTask(id: task.id)
-            
             tableView.deleteRows(at: [indexPath], with: .fade)
+            
+            uniqueDueDates = Array(Set(TaskList.list.map { $0.dueDate })).sorted()
+            tableView.reloadData()
         }
     }
     
