@@ -9,8 +9,8 @@ import Foundation
 
 let imageNames = ["Image 2", "Image 4", "Image 5", "Image 6", "Image 7"]
 
-struct Task {
-    let id = UUID()
+struct Task: Codable {
+    var id = UUID()
     var title: String
     var image = imageNames.randomElement()
     var isDone = false
