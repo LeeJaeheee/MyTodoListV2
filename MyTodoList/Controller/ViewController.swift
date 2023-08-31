@@ -39,8 +39,8 @@ class ViewController: UIViewController {
         NSLayoutConstraint.activate([
             animationView.centerXAnchor.constraint(equalTo: giftboxView.centerXAnchor),
             animationView.centerYAnchor.constraint(equalTo: giftboxView.centerYAnchor, constant: 15),
-            animationView.widthAnchor.constraint(equalTo: giftboxView.widthAnchor, multiplier: 1.8), // Enlarge width
-            animationView.heightAnchor.constraint(equalTo: giftboxView.heightAnchor, multiplier: 1.8) // Enlarge height
+            animationView.widthAnchor.constraint(equalTo: giftboxView.widthAnchor, multiplier: 1.8),
+            animationView.heightAnchor.constraint(equalTo: giftboxView.heightAnchor, multiplier: 1.8)
         ])
         animationView.loopMode = .loop
         animationView.play()

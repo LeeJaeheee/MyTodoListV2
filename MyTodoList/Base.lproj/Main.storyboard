@@ -106,11 +106,20 @@
                                     <constraint firstAttribute="height" constant="120" id="W1c-0N-D2A"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14R-bW-Rqg">
+                                <rect key="frame" x="102" y="685" width="80" height="80"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <segue destination="EKk-ZK-xR6" kind="show" id="29a-Vp-rNz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0ci-XM-B43"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="14R-bW-Rqg" firstAttribute="leading" secondItem="yw2-HQ-LCc" secondAttribute="leading" constant="20" id="6Fq-D9-Zps"/>
                             <constraint firstItem="O1g-hS-syG" firstAttribute="leading" secondItem="HoI-E1-2qR" secondAttribute="leading" id="7E5-gC-d4a"/>
+                            <constraint firstItem="14R-bW-Rqg" firstAttribute="top" secondItem="yw2-HQ-LCc" secondAttribute="top" constant="20" id="I8o-8R-nbq"/>
                             <constraint firstItem="yw2-HQ-LCc" firstAttribute="top" secondItem="ei5-cj-w5a" secondAttribute="bottom" constant="392" id="ICu-sA-27v"/>
                             <constraint firstAttribute="bottom" secondItem="O1g-hS-syG" secondAttribute="bottom" id="Iwt-sD-COX"/>
                             <constraint firstItem="ei5-cj-w5a" firstAttribute="centerX" secondItem="HoI-E1-2qR" secondAttribute="centerX" id="JW3-pe-svS"/>
@@ -118,6 +127,8 @@
                             <constraint firstAttribute="trailing" secondItem="O1g-hS-syG" secondAttribute="trailing" id="j7E-Bm-qwR"/>
                             <constraint firstItem="O1g-hS-syG" firstAttribute="top" secondItem="HoI-E1-2qR" secondAttribute="top" id="sf1-wY-P5K"/>
                             <constraint firstItem="yw2-HQ-LCc" firstAttribute="leading" secondItem="0ci-XM-B43" secondAttribute="leading" constant="82" id="vBE-MD-CGA"/>
+                            <constraint firstItem="14R-bW-Rqg" firstAttribute="trailing" secondItem="yw2-HQ-LCc" secondAttribute="trailing" constant="-20" id="wYc-N9-sv2"/>
+                            <constraint firstItem="14R-bW-Rqg" firstAttribute="bottom" secondItem="yw2-HQ-LCc" secondAttribute="bottom" constant="-20" id="znE-jQ-BmQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="j6e-N1-4VD"/>
@@ -126,7 +137,6 @@
                         <outlet property="giftboxView" destination="yw2-HQ-LCc" id="2Tx-ej-yni"/>
                         <outlet property="mainImageView" destination="O1g-hS-syG" id="Rve-ZH-0Y9"/>
                         <outlet property="todoButton" destination="Go9-hN-tsB" id="5bf-3X-3RQ"/>
-                        <segue destination="EKk-ZK-xR6" kind="show" id="Vzx-8d-9W3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QqY-6s-bEg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
