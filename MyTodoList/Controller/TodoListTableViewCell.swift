@@ -27,19 +27,18 @@ class TodoListTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     @IBAction func switchChanged(_ sender: UISwitch) {
         guard let task = task else { return }
         TaskList.updateIsDone(id: task.id, isDone: sender.isOn)
         titleLabel.setTextWithStrikethrough(task.title, isDone: sender.isOn)
+        let tableView = superview?.superview as! UITableView
+        tableView.reloadData()
     }
     
 
