@@ -23,4 +23,16 @@ extension UIImageView {
         }
     }
     
+    func getImageFromURL(from url: String) {
+        URLManager.shared.getImage(from: URL(string: url)!) { image in
+            DispatchQueue.main.async {
+                if let image = image {
+                    self.image = image
+                } else {
+                    print("fail")
+                }
+            }
+        }
+    }
+    
 }
