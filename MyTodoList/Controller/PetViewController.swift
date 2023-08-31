@@ -10,12 +10,17 @@ import UIKit
 class PetViewController: UIViewController {
 
     @IBOutlet weak var petImageView: UIImageView!
-
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        petImageView.image = UIImage(systemName: "photo")
         setImageFromAPI()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        loadingIndicator.stopAnimating()
     }
     
     func setImageFromAPI() {
