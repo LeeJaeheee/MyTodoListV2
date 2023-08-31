@@ -12,14 +12,21 @@
         <!--Splash View Controller-->
         <scene sceneID="HKp-sC-SWp">
             <objects>
-                <viewController id="jPh-RK-Ucy" customClass="SplashViewController" customModule="MyTodoList" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="SplashViewController" storyboardIdentifier="SplashViewController" id="jPh-RK-Ucy" customClass="SplashViewController" customModule="MyTodoList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fvl-i2-JGq">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sbg-NJ-roJ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image 1" translatesAutoresizingMaskIntoConstraints="NO" id="sbg-NJ-roJ">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
+                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="8yh-a1-Nz1" customClass="LottieAnimationView" customModule="Lottie">
+                                <rect key="frame" x="0.0" y="224" width="393" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="5vF-Ry-mRJ"/>
+                                    <constraint firstAttribute="width" constant="393" id="bDI-NK-oFj"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bhC-Tb-5fQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -27,21 +34,23 @@
                             <constraint firstAttribute="trailing" secondItem="sbg-NJ-roJ" secondAttribute="trailing" id="8AX-Xu-rwQ"/>
                             <constraint firstItem="sbg-NJ-roJ" firstAttribute="top" secondItem="Fvl-i2-JGq" secondAttribute="top" id="Tbj-SC-VOV"/>
                             <constraint firstAttribute="bottom" secondItem="sbg-NJ-roJ" secondAttribute="bottom" id="a2N-Kt-GDc"/>
+                            <constraint firstItem="8yh-a1-Nz1" firstAttribute="top" secondItem="bhC-Tb-5fQ" secondAttribute="top" constant="165" id="asd-QN-tOa"/>
                             <constraint firstItem="sbg-NJ-roJ" firstAttribute="leading" secondItem="Fvl-i2-JGq" secondAttribute="leading" id="eic-Vl-OgB"/>
+                            <constraint firstItem="8yh-a1-Nz1" firstAttribute="centerX" secondItem="Fvl-i2-JGq" secondAttribute="centerX" id="lTU-DO-oec"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="imageView" destination="sbg-NJ-roJ" id="9Fz-Ke-Xay"/>
+                        <outlet property="animationView" destination="8yh-a1-Nz1" id="emH-5D-nUD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mcg-WU-agK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2030" y="-40"/>
+            <point key="canvasLocation" x="-2057.2519083969464" y="-40.140845070422536"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mYF-7t-fCa">
             <objects>
-                <navigationController id="8PQ-je-s9r" sceneMemberID="viewController">
+                <navigationController restorationIdentifier="MainNavigationController" storyboardIdentifier="MainNavigationController" id="8PQ-je-s9r" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="cgy-Dg-3Ec"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HzO-ze-uMT">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -100,14 +109,14 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yw2-HQ-LCc" customClass="LottieAnimationView" customModule="Lottie">
-                                <rect key="frame" x="82" y="665" width="120" height="120"/>
+                                <rect key="frame" x="82" y="633" width="150" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="Ezb-L6-wLN"/>
-                                    <constraint firstAttribute="height" constant="120" id="W1c-0N-D2A"/>
+                                    <constraint firstAttribute="width" constant="150" id="Ezb-L6-wLN"/>
+                                    <constraint firstAttribute="width" secondItem="yw2-HQ-LCc" secondAttribute="height" multiplier="1:1" id="dgC-vX-PjR"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14R-bW-Rqg">
-                                <rect key="frame" x="102" y="685" width="80" height="80"/>
+                                <rect key="frame" x="102" y="653" width="110" height="110"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <connections>
                                     <segue destination="EKk-ZK-xR6" kind="show" id="29a-Vp-rNz"/>
@@ -120,7 +129,7 @@
                             <constraint firstItem="14R-bW-Rqg" firstAttribute="leading" secondItem="yw2-HQ-LCc" secondAttribute="leading" constant="20" id="6Fq-D9-Zps"/>
                             <constraint firstItem="O1g-hS-syG" firstAttribute="leading" secondItem="HoI-E1-2qR" secondAttribute="leading" id="7E5-gC-d4a"/>
                             <constraint firstItem="14R-bW-Rqg" firstAttribute="top" secondItem="yw2-HQ-LCc" secondAttribute="top" constant="20" id="I8o-8R-nbq"/>
-                            <constraint firstItem="yw2-HQ-LCc" firstAttribute="top" secondItem="ei5-cj-w5a" secondAttribute="bottom" constant="392" id="ICu-sA-27v"/>
+                            <constraint firstItem="yw2-HQ-LCc" firstAttribute="top" secondItem="ei5-cj-w5a" secondAttribute="bottom" constant="360" id="ICu-sA-27v"/>
                             <constraint firstAttribute="bottom" secondItem="O1g-hS-syG" secondAttribute="bottom" id="Iwt-sD-COX"/>
                             <constraint firstItem="ei5-cj-w5a" firstAttribute="centerX" secondItem="HoI-E1-2qR" secondAttribute="centerX" id="JW3-pe-svS"/>
                             <constraint firstItem="ei5-cj-w5a" firstAttribute="top" secondItem="0ci-XM-B43" secondAttribute="top" constant="70" id="KeL-er-Rsk"/>
@@ -448,6 +457,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Image 1" width="266.66665649414062" height="133.33332824707031"/>
         <image name="Image 2" width="224.66667175292969" height="399.33334350585938"/>
         <image name="Image 3" width="224.66667175292969" height="399.33334350585938"/>
         <image name="square.and.pencil" catalog="system" width="128" height="113"/>
