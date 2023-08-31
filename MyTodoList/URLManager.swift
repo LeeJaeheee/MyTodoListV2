@@ -12,12 +12,11 @@ class URLManager {
     
     private init() { }
     
-    let url = URL(string: "https://t1.daumcdn.net/cfile/tistory/99A5444A5FE3EA890F?original")!
     let session = URLSession.shared
+    let apiURL = URL(string: "https://api.thecatapi.com/v1/images/search")!
     
-    /*
-    func getJsonData(path: String, completion: @escaping (Result<Data, Error>) -> Void) {
-        let task = session.dataTask(with: url) { data, response, error in
+    func getJsonData(completion: @escaping (Result<[ImageAPI], Error>) -> Void) {
+        let task = session.dataTask(with: apiURL) { data, response, error in
             if let error {
                 completion(.failure(error))
                 return
@@ -30,11 +29,15 @@ class URLManager {
                 completion(.failure(NetworkError.emptyResponse))
                 return
             }
-            completion(.success(data))
+            guard let imageAPI = try? JSONDecoder().decode([ImageAPI].self, from: data) else {
+                completion(.failure(NetworkError.decodeError))
+                return
+            }
+            completion(.success(imageAPI))
         }
         task.resume()
     }
-    */
+    
     func getImage(from url: URL, completion: @escaping (UIImage?) -> Void) {
         let task = session.dataTask(with: url) { data, response, error in
             if let error = error {
@@ -53,8 +56,10 @@ class URLManager {
         task.resume()
     }
 }
+
 enum NetworkError: Error {
     case emptyResponse
     case invalidResponse
+    case decodeError
     case unknown(String)
 }

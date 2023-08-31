@@ -22,15 +22,7 @@ class ViewController: UIViewController {
         todoButton.circleButton = true
         doneButton.circleButton = true
         
-        URLManager.shared.getImage(from: URLManager.shared.url) { image in
-            DispatchQueue.main.async {
-                if let image = image {
-                    self.mainImageView.image = image
-                } else {
-                    print("fail")
-                }
-            }
-        }
+        mainImageView.getImageFromURL(from: "https://t1.daumcdn.net/cfile/tistory/99A5444A5FE3EA890F?original")
 
         let animationView = LottieAnimationView(name: "lN7uSuXCEQ")
         animationView.contentMode = .scaleAspectFill

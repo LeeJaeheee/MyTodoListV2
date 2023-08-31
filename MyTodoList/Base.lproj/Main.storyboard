@@ -318,13 +318,13 @@
         <!--Cat-->
         <scene sceneID="Yu8-zW-aaE">
             <objects>
-                <viewController id="EKk-ZK-xR6" sceneMemberID="viewController">
+                <viewController id="EKk-ZK-xR6" customClass="PetViewController" customModule="MyTodoList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CTL-Fu-wgA">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qe1-Qv-sh4">
-                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="665"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fgg-R0-Ofn"/>
@@ -333,12 +333,19 @@
                             <constraint firstItem="Qe1-Qv-sh4" firstAttribute="trailing" secondItem="fgg-R0-Ofn" secondAttribute="trailing" id="1ZN-Zn-dBG"/>
                             <constraint firstItem="Qe1-Qv-sh4" firstAttribute="leading" secondItem="fgg-R0-Ofn" secondAttribute="leading" id="Gpu-K0-Nqa"/>
                             <constraint firstItem="Qe1-Qv-sh4" firstAttribute="top" secondItem="fgg-R0-Ofn" secondAttribute="top" id="nBP-Yd-nWD"/>
-                            <constraint firstItem="Qe1-Qv-sh4" firstAttribute="bottom" secondItem="fgg-R0-Ofn" secondAttribute="bottom" id="r3g-1U-yV0"/>
+                            <constraint firstItem="Qe1-Qv-sh4" firstAttribute="bottom" secondItem="fgg-R0-Ofn" secondAttribute="bottom" constant="-50" id="r3g-1U-yV0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Cat" id="RAI-a4-01o">
-                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="Ezv-BD-EGG"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="Ezv-BD-EGG">
+                            <connections>
+                                <action selector="refreshImageButtonTapped:" destination="EKk-ZK-xR6" id="LAd-Cj-jTg"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="petImageView" destination="Qe1-Qv-sh4" id="kRI-Vc-pkJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="75D-in-h7S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
