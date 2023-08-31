@@ -35,6 +35,7 @@ class ViewController: UIViewController {
             animationView.heightAnchor.constraint(equalTo: giftboxView.heightAnchor, multiplier: 1.8)
         ])
         animationView.loopMode = .loop
+        animationView.animationSpeed = 1.5
         animationView.play()
     }
 

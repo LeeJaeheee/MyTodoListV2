@@ -6,20 +6,45 @@
 //
 
 import UIKit
+import Lottie
 
 class SplashViewController: UIViewController {
-
-    @IBOutlet weak var imageView: UIImageView!
+    
+    @IBOutlet weak var animationView: LottieAnimationView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let gif = UIImage.gifImageWithName("fudolist")
-        imageView.image = gif
+        setupAnimation()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-            self.performSegue(withIdentifier: "navSegue", sender: nil)
+        playAnimation()
+    }
+    
+    private func setupAnimation() {
+        let animation = LottieAnimation.named("animation_llz0e7mu")
+        animationView.animation = animation
+        animationView.loopMode = .playOnce
+    }
+    
+    private func playAnimation() {
+        animationView.play { [weak self] finished in
+            if finished {
+                print("finished")
+                self?.navigateToMainScreen()
+            }
         }
     }
+    
+    private func navigateToMainScreen() {
+            if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate {
+                let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let mainViewController = mainStoryboard.instantiateViewController(withIdentifier: "MainNavigationController")
+                sceneDelegate.window?.rootViewController = mainViewController
+            }
+        }
     
 }

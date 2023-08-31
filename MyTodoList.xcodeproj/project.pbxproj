@@ -7,11 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D22E70D42A97D1E000C6CFBA /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22E70D32A97D1E000C6CFBA /* UIImage+Extension.swift */; };
-		D22E70DA2A97D91D00C6CFBA /* fudolist.gif in Resources */ = {isa = PBXBuildFile; fileRef = D22E70D92A97D91D00C6CFBA /* fudolist.gif */; };
 		D22E70DC2A97DA1E00C6CFBA /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22E70DB2A97DA1E00C6CFBA /* SplashViewController.swift */; };
 		D26B05762AA05CBD00A91F0E /* PetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26B05752AA05CBD00A91F0E /* PetViewController.swift */; };
 		D26B05782AA0610A00A91F0E /* ImageAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26B05772AA0610A00A91F0E /* ImageAPI.swift */; };
+		D26B05882AA09F8A00A91F0E /* animation_llz0e7mu.json in Resources */ = {isa = PBXBuildFile; fileRef = D26B05872AA09F8A00A91F0E /* animation_llz0e7mu.json */; };
 		D2A82F662A976BC700CC7CFD /* URLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A82F652A976BC700CC7CFD /* URLManager.swift */; };
 		D2D308B72A851C83002894C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D308B62A851C83002894C5 /* AppDelegate.swift */; };
 		D2D308B92A851C83002894C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D308B82A851C83002894C5 /* SceneDelegate.swift */; };
@@ -36,11 +35,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D22E70D32A97D1E000C6CFBA /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
-		D22E70D92A97D91D00C6CFBA /* fudolist.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = fudolist.gif; sourceTree = "<group>"; };
 		D22E70DB2A97DA1E00C6CFBA /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		D26B05752AA05CBD00A91F0E /* PetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetViewController.swift; sourceTree = "<group>"; };
 		D26B05772AA0610A00A91F0E /* ImageAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAPI.swift; sourceTree = "<group>"; };
+		D26B05872AA09F8A00A91F0E /* animation_llz0e7mu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = animation_llz0e7mu.json; sourceTree = "<group>"; };
 		D2A82F652A976BC700CC7CFD /* URLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLManager.swift; sourceTree = "<group>"; };
 		D2D308B32A851C83002894C5 /* MyTodoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTodoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2D308B62A851C83002894C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -105,7 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				D2FE262E2A9DD32C002901A0 /* lN7uSuXCEQ.json */,
-				D22E70D92A97D91D00C6CFBA /* fudolist.gif */,
+				D26B05872AA09F8A00A91F0E /* animation_llz0e7mu.json */,
 				D2D308B62A851C83002894C5 /* AppDelegate.swift */,
 				D2D308B82A851C83002894C5 /* SceneDelegate.swift */,
 				D2D308CE2A8531BC002894C5 /* Model */,
@@ -128,7 +126,6 @@
 				D2D308E02A857303002894C5 /* UILabel+Extension.swift */,
 				D2D308E22A857599002894C5 /* UIImageView+Extension.swift */,
 				D2D308E82A85B223002894C5 /* Calendar+Extension.swift */,
-				D22E70D32A97D1E000C6CFBA /* UIImage+Extension.swift */,
 				D2A82F652A976BC700CC7CFD /* URLManager.swift */,
 			);
 			name = Utils;
@@ -231,9 +228,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2D308C32A851C85002894C5 /* LaunchScreen.storyboard in Resources */,
+				D26B05882AA09F8A00A91F0E /* animation_llz0e7mu.json in Resources */,
 				D2FE262F2A9DD32C002901A0 /* lN7uSuXCEQ.json in Resources */,
 				D2D308C02A851C85002894C5 /* Assets.xcassets in Resources */,
-				D22E70DA2A97D91D00C6CFBA /* fudolist.gif in Resources */,
 				D2D308BE2A851C83002894C5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,7 +254,6 @@
 				D2A82F662A976BC700CC7CFD /* URLManager.swift in Sources */,
 				D2D308D02A8532FD002894C5 /* Task.swift in Sources */,
 				D2D308B72A851C83002894C5 /* AppDelegate.swift in Sources */,
-				D22E70D42A97D1E000C6CFBA /* UIImage+Extension.swift in Sources */,
 				D26B05762AA05CBD00A91F0E /* PetViewController.swift in Sources */,
 				D2D308B92A851C83002894C5 /* SceneDelegate.swift in Sources */,
 				D22E70DC2A97DA1E00C6CFBA /* SplashViewController.swift in Sources */,
