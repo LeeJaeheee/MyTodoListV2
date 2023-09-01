@@ -1,3 +1,5 @@
+<p align="center"><img src="https://github.com/LeeJaeheee/MyTodoListV2/assets/74818845/67e6d886-45b5-4332-9514-86513db02e89" width="30%"></p>
+
 # MyTodoList
 [내일배움캠프 iOS트랙] 8주차 개인 과제 - TodoListV2
 
